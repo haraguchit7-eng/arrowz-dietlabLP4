@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARROWZ HYPOXIC DIET LAB | FC募集</title>
+  <meta name="description" content="忙しい人のための痩せるインフラ。30分時短×低酸素×月額制の次世代フィットネスFC募集LP。" />
+  <style>
+    :root {
+      --navy: #06162d;
+      --navy-2: #0d284b;
+      --gold: #d4a84f;
+      --gold-2: #efc978;
+      --bg: #f3f0ea;
+      --card: #ffffff;
+      --text: #1c2430;
+      --muted: #67707c;
+      --line: #ddd5c6;
+      --shadow: 0 16px 36px rgba(6, 22, 45, 0.10);
+      --max: 1200px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    .section { padding: 72px 0; }
+    .eyebrow { display: inline-block; margin-bottom: 10px; color: var(--gold); font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .section-title { margin: 0 0 12px; font-size: clamp(30px, 4.2vw, 52px); line-height: 1.15; letter-spacing: -0.03em; }
+    .section-lead { margin: 0; color: var(--muted); font-size: 16px; }
+    .site-header { position: sticky; top: 0; z-index: 50; background: rgba(6, 22, 45, 0.92); color: #fff; backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 0; }
+    .logo { font-size: 16px; font-weight: 900; letter-spacing: 0.08em; }
+    .logo small { display: block; margin-top: 2px; font-size: 10px; letter-spacing: 0.12em; color: rgba(255,255,255,0.68); }
+    .nav { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; font-size: 14px; color: rgba(255,255,255,0.84); }
+    .header-cta, .primary-btn, .secondary-btn { display: inline-flex; align-items: center; justify-content: center; font-weight: 900; transition: 0.2s ease; }
+    .header-cta, .primary-btn { background: linear-gradient(135deg, var(--gold), var(--gold-2)); color: #241700; box-shadow: var(--shadow); }
+    .header-cta { padding: 12px 18px; border-radius: 10px; font-size: 14px; white-space: nowrap; }
+    .primary-btn { padding: 18px 28px; border-radius: 8px; font-size: 18px; }
+    .secondary-btn { padding: 16px 24px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.20); color: #fff; background: rgba(255,255,255,0.04); }
+    .hero { background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: #fff; padding: 40px 0 0; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 28px; align-items: stretch; }
+    .hero-copy { padding: 40px 0 48px; }
+    .hero-title { margin: 0 0 16px; font-size: clamp(42px, 6vw, 82px); line-height: 1.02; letter-spacing: -0.05em; }
+    .hero-sub { margin: 0 0 24px; font-size: 20px; color: rgba(255,255,255,0.88); }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 14px; margin: 28px 0 32px; }
+    .badge { width: 104px; height: 104px; border-radius: 999px; border: 2px solid rgba(212,168,79,0.92); display: flex; align-items: center; justify-content: center; text-align: center; padding: 10px; color: var(--gold-2); font-weight: 800; line-height: 1.35; background: rgba(255,255,255,0.04); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-visual { min-height: 560px; border-top-left-radius: 24px; overflow: hidden; box-shadow: var(--shadow); background: #d4dde8; }
+    .hero-visual img { width: 100%; height: 100%; object-fit: cover; }
+    .two-col { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 28px; align-items: start; }
+    .feature-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; }
+    .feature-card, .support-card, .voice-card, .reason-card, .card, .stats-card { background: var(--card); border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .feature-card .image, .support-card .image, .voice-card .image { height: 170px; background: linear-gradient(135deg, #cfd7e5, #f8fbff); overflow: hidden; }
+    .feature-card .image img, .support-card .image img, .voice-card .image img { width: 100%; height: 100%; object-fit: cover; }
+    .feature-body, .support-body, .voice-body, .reason-body { padding: 12px 12px 14px; }
+    .feature-no { display: inline-block; margin-bottom: 6px; padding: 3px 7px; border-radius: 4px; background: #113d7a; color: #fff; font-size: 12px; font-weight: 800; }
+    .feature-title, .support-body strong, .voice-body strong, .reason-body strong { display: block; font-size: 15px; line-height: 1.45; }
+    .market-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; margin-top: 20px; }
+    .stats-card { padding: 16px 14px; text-align: center; }
+    .stats-card strong { display: block; margin-bottom: 8px; font-size: 15px; }
+    .stats-value { display: block; margin-bottom: 4px; font-size: 24px; line-height: 1.1; font-weight: 900; color: var(--navy); }
+    .brand-image { min-height: 320px; overflow: hidden; background: #d6d9de; box-shadow: var(--shadow); }
+    .brand-image img { width: 100%; height: 100%; object-fit: cover; }
+    .comparison-section { background: var(--navy); color: #fff; }
+    .comparison-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 22px; align-items: start; }
+    table { width: 100%; margin-top: 20px; border-collapse: collapse; background: rgba(255,255,255,0.04); }
+    th, td { border: 1px solid rgba(255,255,255,0.16); padding: 12px 14px; text-align: left; font-size: 14px; vertical-align: top; }
+    th { background: rgba(255,255,255,0.06); color: #fff; }
+    td.highlight { color: #f6cf7a; font-weight: 900; }
+    .earnings-card { background: #fff; color: var(--text); padding: 20px; box-shadow: var(--shadow); }
+    .earnings-flex { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+    .earnings-image { min-height: 220px; overflow: hidden; background: #d4dde8; }
+    .earnings-image img { width: 100%; height: 100%; object-fit: cover; }
+    .earnings-table { background: #f8f8f8; border: 1px solid #d7d7d7; padding: 10px 14px; }
+    .earnings-row { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid #ddd; font-size: 15px; }
+    .earnings-row:last-child { border-bottom: none; }
+    .earnings-value { font-weight: 900; }
+    .earnings-total .earnings-value { font-size: 22px; color: var(--navy); }
+    .period-row { margin-top: 10px; display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: var(--navy); color: #fff; font-weight: 900; }
+    .support-grid, .voice-grid, .reason-grid { display: grid; gap: 16px; margin-top: 24px; }
+    .support-grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+    .voice-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    .reason-grid { grid-template-columns: repeat(5, minmax(0,1fr)); }
+    .flow { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; margin-top: 22px; }
+    .flow-step { flex: 1; min-width: 140px; text-align: center; }
+    .flow-icon { width: 74px; height: 74px; border-radius: 999px; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; border: 1px solid #e1e1e1; background: #f1f1f1; color: var(--navy); font-weight: 900; }
+    .reason-card { background: #0a0f17; color: #fff; border-radius: 10px; overflow: hidden; }
+    .reason-body { text-align: center; padding: 18px 14px 20px; }
+    .reason-icon { width: 42px; height: 42px; margin: 0 auto 12px; border-radius: 999px; border: 2px solid var(--gold); color: var(--gold); display: flex; align-items: center; justify-content: center; font-weight: 900; }
+    .final-cta { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 22px; margin-top: 24px; background: linear-gradient(135deg, var(--navy), var(--navy-2)); color: #fff; box-shadow: var(--shadow); }
+    .final-copy { padding: 34px; }
+    .final-copy h2 { margin: 0 0 12px; font-size: clamp(28px, 4vw, 44px); line-height: 1.2; }
+    .final-copy p { margin: 0 0 20px; color: rgba(255,255,255,0.88); }
+    .final-visual { min-height: 280px; overflow: hidden; background: #d4dde8; }
+    .final-visual img { width: 100%; height: 100%; object-fit: cover; }
+    footer { padding: 24px 0 60px; text-align: center; color: var(--muted); font-size: 13px; }
+    @media (max-width: 1024px) {
+      .hero-grid, .two-col, .market-grid, .comparison-grid, .final-cta { grid-template-columns: 1fr; }
+      .feature-grid, .stats-grid, .support-grid, .voice-grid, .reason-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    }
+    @media (max-width: 640px) {
+      .nav { display: none; }
+      .feature-grid, .stats-grid, .support-grid, .voice-grid, .reason-grid, .earnings-flex { grid-template-columns: 1fr; }
+      .badge { width: 92px; height: 92px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">ARROWZ<small>HYPOXIC DIET LAB</small></div>
+      <nav class="nav">
+        <a href="#concept">選ばれる理由</a>
+        <a href="#earnings">収益モデル</a>
+        <a href="#comparison">競合比較</a>
+        <a href="#support">サポート</a>
+        <a href="#flow">開業までの流れ</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="header-cta" href="#contact">資料請求・説明会予約</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Next Generation Fitness FC</div>
+        <h1 class="hero-title">忙しい人のための<br>痩せるインフラ。</h1>
+        <p class="hero-sub">科学的根拠に基づく低酸素環境で、30分の新習慣。</p>
+        <div class="badge-row">
+          <div class="badge">30分<br>時短</div>
+          <div class="badge">低酸素<br>高効率</div>
+          <div class="badge">月額制<br>安定収益</div>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#contact">無料資料請求・説明会予約</a>
+          <a class="secondary-btn" href="#earnings">収益モデルを見る</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <img src="hero-storefront.jpg" alt="店舗外観">
+      </div>
+    </div>
+  </section>
+
+  <section id="concept" class="section">
+    <div class="container two-col">
+      <div>
+        <div class="eyebrow">Concept</div>
+        <h2 class="section-title">アローズ低酸素<br>ダイエットラボとは？</h2>
+        <p class="section-lead">酸素濃度をコントロールした空間で、短時間でも効率的に脂肪燃焼。継続しやすい月額制で、新しいフィットネス習慣を提供します。</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="image"><img src="concept-30min.jpg" alt="30分で運動する利用者"></div>
+          <div class="feature-body"><span class="feature-no">01</span><span class="feature-title">たった30分で効率運動</span>忙しくても結果が出る時短トレーニング。</div>
+        </article>
+        <article class="feature-card">
+          <div class="image"><img src="concept-hypoxic-room.jpg" alt="低酸素ルーム"></div>
+          <div class="feature-body"><span class="feature-no">02</span><span class="feature-title">低酸素で脂肪燃焼UP</span>通常運動より高効率な世界観を訴求。</div>
+        </article>
+        <article class="feature-card">
+          <div class="image"><img src="concept-measurement.jpg" alt="測定デバイス"></div>
+          <div class="feature-body"><span class="feature-no">03</span><span class="feature-title">科学的測定で可視化</span>定期測定で成果を見せ、継続率を高めます。</div>
+        </article>
+        <article class="feature-card">
+          <div class="image"><img src="concept-reception.jpg" alt="受付風景"></div>
+          <div class="feature-body"><span class="feature-no">04</span><span class="feature-title">月額制で安定収益</span>継続しやすい仕組みで売上の安定化を狙えます。</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:32px;">
+    <div class="container market-grid">
+      <div>
+        <div class="eyebrow">Market</div>
+        <h2 class="section-title">今、なぜこの事業が<br>チャンスなのか？</h2>
+        <p class="section-lead">ダイエット・健康市場は拡大し続けています。しかし、忙しい人が通いやすく、結果が出るジムはまだ少ない。そこに大きなビジネスチャンスがあります。</p>
+        <div class="stats-grid">
+          <div class="stats-card"><strong>ダイエット市場</strong><span class="stats-value">約9,700億円</span>市場規模の大きさ</div>
+          <div class="stats-card"><strong>健康意識の高まり</strong><span class="stats-value">78.3%</span>健康に投資したい層</div>
+          <div class="stats-card"><strong>時短ニーズ</strong><span class="stats-value">63.1%</span>短時間で効率重視</div>
+          <div class="stats-card"><strong>女性需要</strong><span class="stats-value">6.8%</span>成長余地イメージ</div>
+        </div>
+      </div>
+      <div class="brand-image">
+        <img src="market-brand-space.jpg" alt="ブランド空間">
+      </div>
+    </div>
+  </section>
+
+  <section id="comparison" class="section comparison-section">
+    <div class="container comparison-grid">
+      <div>
+        <div class="eyebrow">Comparison</div>
+        <h2 class="section-title" style="color:#fff;">競合と比べて、<br>ここが違う。</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>比較項目</th>
+              <th>一般ジム</th>
+              <th>パーソナル</th>
+              <th>chocoZAP</th>
+              <th>アローズ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>月額単価</td><td>安い</td><td>高い</td><td>非常に安い</td><td class="highlight">中価格で高収益</td></tr>
+            <tr><td>成果</td><td>出にくい</td><td>出るが高額</td><td>出にくい</td><td class="highlight">出やすく継続</td></tr>
+            <tr><td>継続率</td><td>低い</td><td>中</td><td>低い</td><td class="highlight">高い</td></tr>
+            <tr><td>運営のしやすさ</td><td>人手が必要</td><td>トレーナー依存</td><td>無人で弱い</td><td class="highlight">仕組みで回る</td></tr>
+            <tr><td>差別化</td><td>少ない</td><td>価格が壁</td><td>安さだけ</td><td class="highlight">低酸素 × 30分</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="earnings" class="earnings-card">
+        <div class="eyebrow">Earnings</div>
+        <h3 style="margin:0;font-size:32px;line-height:1.2;">収益モデル（1店舗例）</h3>
+        <div class="earnings-flex">
+          <div class="earnings-image"><img src="earnings-store-operation.jpg" alt="運営中の店内風景"></div>
+          <div class="earnings-table">
+            <div class="earnings-row"><span>会員数</span><span class="earnings-value">200名</span></div>
+            <div class="earnings-row"><span>平均月額</span><span class="earnings-value">19,000円</span></div>
+            <div class="earnings-row"><span>月会費売上</span><span class="earnings-value">3,800,000円</span></div>
+            <div class="earnings-row"><span>物販売上</span><span class="earnings-value">500,000円</span></div>
+            <div class="earnings-row earnings-total"><span>月商合計</span><span class="earnings-value">4,300,000円</span></div>
+            <div class="period-row"><span>投資回収期間</span><span>24〜36ヶ月</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support" class="section">
+    <div class="container">
+      <div class="eyebrow">Support</div>
+      <h2 class="section-title">未経験でも安心の本部サポート</h2>
+      <div class="support-grid">
+        <article class="support-card">
+          <div class="image"><img src="support-training.jpg" alt="開業研修"></div>
+          <div class="support-body"><strong>開業研修</strong>運営・基礎知識を整理して学べます。</div>
+        </article>
+        <article class="support-card">
+          <div class="image"><img src="support-staff.jpg" alt="スタッフ教育"></div>
+          <div class="support-body"><strong>スタッフ教育</strong>接客・測定・指導まで伴走します。</div>
+        </article>
+        <article class="support-card">
+          <div class="image"><img src="support-opening.jpg" alt="開業支援"></div>
+          <div class="support-body"><strong>開業支援</strong>物件選定・内装・集客まで支援。</div>
+        </article>
+        <article class="support-card">
+          <div class="image"><img src="support-follow.jpg" alt="継続フォロー"></div>
+          <div class="support-body"><strong>継続フォロー</strong>定期面談で課題解決と売上向上を支援。</div>
+        </article>
+      </div>
+
+      <div class="eyebrow" style="margin-top:34px;">Voice</div>
+      <h2 class="section-title" style="font-size:38px;">加盟者の声</h2>
+      <div class="voice-grid">
+        <article class="voice-card">
+          <div class="image"><img src="voice-owner-a.jpg" alt="オーナーA"></div>
+          <div class="voice-body"><strong>異業種からでも成功できました</strong>本部のサポートが手厚く、未経験でも安心して開業できました。</div>
+        </article>
+        <article class="voice-card">
+          <div class="image"><img src="voice-owner-b.jpg" alt="オーナーB"></div>
+          <div class="voice-body"><strong>想定より早く回収できました</strong>集客導線が確立されていて、開業2年で投資回収できました。</div>
+        </article>
+        <article class="voice-card">
+          <div class="image"><img src="voice-owner-c.jpg" alt="オーナーC"></div>
+          <div class="voice-body"><strong>会員様の満足度が高い</strong>継続率が高く、売上が安定しやすいのが魅力です。</div>
+        </article>
+      </div>
+
+      <div id="flow" class="eyebrow" style="margin-top:36px;">Flow</div>
+      <h2 class="section-title" style="font-size:38px;">加盟までの流れ</h2>
+      <div class="flow">
+        <div class="flow-step"><div class="flow-icon">01</div>資料請求</div>
+        <div class="flow-step"><div class="flow-icon">02</div>説明会</div>
+        <div class="flow-step"><div class="flow-icon">03</div>個別面談・店舗確認</div>
+        <div class="flow-step"><div class="flow-icon">04</div>ご契約</div>
+        <div class="flow-step"><div class="flow-icon">05</div>研修</div>
+        <div class="flow-step"><div class="flow-icon">06</div>開業</div>
+      </div>
+
+      <div class="eyebrow" style="margin-top:36px;">Reason</div>
+      <h2 class="section-title" style="font-size:38px;">オーナーが選ぶ5つの理由</h2>
+      <div class="reason-grid">
+        <article class="reason-card"><div class="reason-body"><div class="reason-icon">1</div><strong>高い収益性</strong>月商400万円モデル可能</div></article>
+        <article class="reason-card"><div class="reason-body"><div class="reason-icon">2</div><strong>低い運営負担</strong>少人数・省人化運営</div></article>
+        <article class="reason-card"><div class="reason-body"><div class="reason-icon">3</div><strong>小スペース出店</strong>20坪〜開業可能</div></article>
+        <article class="reason-card"><div class="reason-body"><div class="reason-icon">4</div><strong>女性に強い</strong>集客のしやすさ</div></article>
+        <article class="reason-card"><div class="reason-body"><div class="reason-icon">5</div><strong>再現性の高さ</strong>未経験でも成功しやすい</div></article>
+      </div>
+
+      <div class="final-cta" id="contact">
+        <div class="final-copy">
+          <h2>次のフィットネス市場を、<br>あなたの手で。</h2>
+          <p>先行募集は今だけ。まずは無料資料でご確認ください。</p>
+          <a class="primary-btn" href="mailto:info@example.com?subject=アローズ低酸素ダイエットラボFC資料請求">無料資料請求・説明会予約</a>
+        </div>
+        <div class="final-visual"><img src="cta-owner.jpg" alt="最終CTA画像"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="section-title" style="font-size:38px;">よくある質問</h2>
+      <div class="card" style="padding:24px;">
+        <div style="padding:14px 0;border-bottom:1px solid var(--line);"><strong>3,000万円投資でも回収できますか？</strong><br>会員200名前後と追加売上を組み合わせる設計で、24〜36ヶ月をひとつの目安に考えます。</div>
+        <div style="padding:14px 0;border-bottom:1px solid var(--line);"><strong>低酸素の価値は一般のお客様に伝わりますか？</strong><br>「短時間で効率よく変わりたい」という生活者価値に翻訳して伝えることで理解されやすくなります。</div>
+        <div style="padding:14px 0;"><strong>未経験でも開業できますか？</strong><br>可能です。開業前研修と数値管理の仕組みづくりを本部がサポートします。</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © ARROWZ HYPOXIC DIET LAB Franchise. All Rights Reserved. ※ 連絡先メールは仮です。
+  </footer>
+</body>
+</html>
